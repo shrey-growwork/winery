@@ -28,7 +28,6 @@ function Data() {
     useEffect(() => {
         axios.get(url)
             .then(response => {
-                // tempdata(response.data)
                 setpost1(response.data)
                 console.log(response.data, "response")
             })
@@ -76,7 +75,7 @@ function Data() {
                         <TextField
                             id="filled-basic"
                             sx={{ width: '450px' }}
-                            label="Search Username or Id..."
+                            label="Search Wine or Winery"
                             variant="filled"
                             onChange={(e) => onChangeHandler(e.target.value)}
                         />
@@ -95,11 +94,11 @@ function Data() {
                                         </Typography>
 
                                         <Typography sx={{ mb: 1.5 }} >
-                                            Winery Name: {ele.winery}
+                                            Wine  Name: {ele.winery}
                                         </Typography>
 
                                         <Typography sx={{ mb: 1.5 }}>
-                                            Wine Name: {ele.wine}
+                                            Winery Name: {ele.wine}
                                         </Typography>
 
                                         <Typography sx={{ mb: 1.5 }}>
